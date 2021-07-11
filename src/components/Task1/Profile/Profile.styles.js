@@ -8,4 +8,5 @@ export const ProfileContainer = styled.div`
   height: 500px;
   border-radius: 2%;
   box-shadow: 0 0 4px 6px #21212126;
+  margin-bottom: 40px;
 `;
