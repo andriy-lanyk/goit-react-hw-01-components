@@ -5,4 +5,5 @@ export const SectionWrapper = styled.section`
   box-shadow: 0 0 4px 6px #21212126;
   border-radius: 0 0 10px 10px;
   overflow: hidden;
+  margin-bottom: 50px;
 `;
