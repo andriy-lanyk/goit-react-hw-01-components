@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { LabelName } from "../Label/Label";
 import { PercentageNumber } from "../Percentage/Percentage";
 import { ListStatistic, ListStatisticItem } from "./List.styled";
@@ -14,6 +15,10 @@ const StatisticList = ({ stats }) => {
       ))}
     </ListStatistic>
   );
+};
+
+StatisticList.propTypes = {
+  stats: PropTypes.array.isRequired,
 };
 
 export { StatisticList };

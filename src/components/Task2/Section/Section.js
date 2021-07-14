@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { StatisticTitle } from "../Title/Title";
 import { StatisticList } from "../List/List";
 import statisticData from "../../../data/statistical.json";
@@ -12,10 +11,6 @@ const Statistics = () => {
       <StatisticList stats={statisticData} />
     </SectionWrapper>
   );
-};
-
-Statistics.propTypes = {
-  statisticData: PropTypes.array,
 };
 
 export { Statistics };

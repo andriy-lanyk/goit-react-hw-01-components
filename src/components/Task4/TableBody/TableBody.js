@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { BobyStyled, CellOfBody, RowOfBody } from "./TableBody.styled";
 
 export const TableBody = ({ transactions }) => {
@@ -15,4 +16,8 @@ export const TableBody = ({ transactions }) => {
       })}
     </BobyStyled>
   );
+};
+
+TableBody.propTypes = {
+  transactions: PropTypes.arrayOf(PropTypes.object).isRequired,
 };

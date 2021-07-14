@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import { HeadOfTable, CellOfHead } from "../TableHead/TableHead.styled";
 
 export const TableHead = ({ type, amount, currency }) => {
@@ -11,4 +13,10 @@ export const TableHead = ({ type, amount, currency }) => {
       </tr>
     </HeadOfTable>
   );
+};
+
+TableHead.propTypes = {
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
 };

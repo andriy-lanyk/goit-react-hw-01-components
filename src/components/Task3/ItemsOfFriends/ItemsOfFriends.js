@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {
   ItemOfFriends,
   StatusItem,
@@ -14,4 +15,8 @@ export const ItemsOfFriends = ({ friends }) => {
       <NameFriend>{name}</NameFriend>
     </ItemOfFriends>
   ));
+};
+
+ItemsOfFriends.propTypes = {
+  friends: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
