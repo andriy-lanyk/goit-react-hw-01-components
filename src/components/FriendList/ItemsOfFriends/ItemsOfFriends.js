@@ -7,16 +7,18 @@ import {
   NameFriend,
 } from "./ItemsOfFriends.styled";
 
-export const ItemsOfFriends = ({ friends }) => {
-  return friends.map(({ avatar, name, isOnline, id }) => (
-    <ItemOfFriends key={id}>
+export const ItemsOfFriends = ({ avatar, name, isOnline }) => {
+  return (
+    <ItemOfFriends>
       <StatusItem status={isOnline}></StatusItem>
       <AvatarFriend src={avatar} alt={name} width="48" />
       <NameFriend>{name}</NameFriend>
     </ItemOfFriends>
-  ));
+  );
 };
 
 ItemsOfFriends.propTypes = {
-  friends: PropTypes.arrayOf(PropTypes.object).isRequired,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
 };
