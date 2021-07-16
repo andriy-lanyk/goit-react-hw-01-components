@@ -1,15 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { StatisticTitle } from "../Title/Title";
+// import { StatisticTitle } from "../Title/Title";
 import { StatisticList } from "../List/List";
-import { SectionWrapper, ListStatistic } from "./Section.styles";
+import {
+  SectionWrapper,
+  ListStatistic,
+  TitleStatistic,
+} from "./Section.styles";
 
-const Statistics = ({ data }) => {
+const Statistics = ({ title, stats }) => {
   return (
     <SectionWrapper>
-      <StatisticTitle title="Upload stats" />
+      {title ? <TitleStatistic>{title}</TitleStatistic> : null}
       <ListStatistic>
-        {data.map(({ id, label, percentage }) => (
+        {stats.map(({ id, label, percentage }) => (
           <StatisticList key={id} label={label} percentage={percentage} />
         ))}
       </ListStatistic>
@@ -17,8 +21,13 @@ const Statistics = ({ data }) => {
   );
 };
 
+Statistics.defaultProps = {
+  title: null,
+};
+
 Statistics.propTypes = {
-  data: PropTypes.array.isRequired,
+  stats: PropTypes.array.isRequired,
+  title: PropTypes.string,
 };
 
 export { Statistics };

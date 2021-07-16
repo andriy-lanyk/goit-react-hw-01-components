@@ -5,19 +5,19 @@ import {
   StatusItem,
   AvatarFriend,
   NameFriend,
-} from "./ItemsOfFriends.styled";
+} from "./FriendListItem.styled";
 
-export const ItemsOfFriends = ({ avatar, name, isOnline }) => {
+export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <ItemOfFriends>
-      <StatusItem status={isOnline}></StatusItem>
+      <StatusItem status={isOnline} />
       <AvatarFriend src={avatar} alt={name} width="48" />
       <NameFriend>{name}</NameFriend>
     </ItemOfFriends>
   );
 };
 
-ItemsOfFriends.propTypes = {
+FriendListItem.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   isOnline: PropTypes.bool.isRequired,
