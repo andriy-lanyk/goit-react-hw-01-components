@@ -11,7 +11,7 @@ import {
 const Statistics = ({ title, stats }) => {
   return (
     <SectionWrapper>
-      {title ? <TitleStatistic>{title}</TitleStatistic> : null}
+      {title && <TitleStatistic>{title}</TitleStatistic>}
       <ListStatistic>
         {stats.map(({ id, label, percentage }) => (
           <StatisticList key={id} label={label} percentage={percentage} />
